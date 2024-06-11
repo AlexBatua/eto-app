@@ -12,7 +12,7 @@ load_dotenv()
 #else:
 #    SQLALCHEMY_DATABASE_URL = 'sqlite:///database.db'
 
-SQLALCHEMY_DATABASE_URL = os.environ.get("DB_CONN", 'sqlite:///database.db')
+SQLALCHEMY_DATABASE_URL = os.environ.get("DB_CONN", 'postgresql://etoapp:password@db:5432/etoapp')
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

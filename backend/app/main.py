@@ -44,7 +44,7 @@ def get_db():
 
 @app.get("/")
 async def root():
-   return {"message": "Hello World"}
+   return {"message": "Hi"}
 
 
 @app.get("/docs")
